@@ -1,0 +1,657 @@
+@charset "utf-8";/*폰트 설정*/
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900");
+
+body{font-family: 'Noto Sans KR', sans-serif !important;font-size:16px;white-space:normal;color:#282828;}
+*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;letter-spacing:-.6px;}
+
+.phonak{max-width:1920px;margin:auto;opacity:0;overflow-x:hidden;}
+.phonak img{width:100%;vertical-align:top;}
+.phonak .tit1{display:block;margin-top:10px;font-weight:900;font-size:151px;line-height:151px;color:#80c242;}
+.phonak .tit2{font-weight:900;font-size:52px;line-height:55px;color:#80c242;text-align:center;}
+.phonak .tit2.ty1{color:#ff6600;}
+.phonak .section .description{margin-top:27px;font-size:32px;line-height:44px;text-align:center;}
+.phonak .moOnly{display:none !important;}
+.phonak .btn{display:block;margin-top:36px;text-align:center;}
+.phonak .btn a{position:relative;display:inline-block;width:685px;height:113px;font-weight:900;font-size:34px;line-height:113px;color:#fff;background-color:#ff6600;border-radius:57px;overflow: hidden;}
+
+/*Scroll Event*/
+.phonak .fadeInLeft{position:relative;opacity:0;max-width:100%;transform:translateX(-300px)}
+.phonak .fadeInRight{position:relative;opacity:0;max-width:100%;transform:translateX(300px)}
+.phonak .showmeLeft{opacity:1;left:300px;}
+.phonak .showmeRight{opacity:1;left:-300px;}
+
+/*재난지원금 팝업*/
+.phonak .support{position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;background-color:rgba(0,0,0,0.2);}
+.phonak .support .inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:480px;height:530px;}
+.phonak .support .bttm{display:flex;height:50px;padding:0 20px;background-color:#333;}
+.phonak .support .bttm a{display:inline-block;line-height:50px;color:#fff;}
+.phonak .support .bttm > a:first-child{margin-right:auto;}
+
+/*MAIN VISUAL*/
+.phonak .vis{position:relative;height:958px;background:url('../img/img_main_visual_1993x958.jpg') center center no-repeat;text-align:right;padding:31px 34px;}
+.phonak .vis .logo{display:inline-block;overflow:hidden;width:136px;height:49px;background:url('../img/img_logo_136x49.png') no-repeat;background-size:100%;text-align:right;}
+.phonak .logo .blind{display:inline-block;width:1px;height:1px;margin:-1px;overflow:hidden;}
+.phonak .vis .titBox{text-align:center;padding-top:69px;}
+.phonak .vis .titBox .description{font-weight:900;font-size:53px;line-height:53px;}
+.phonak .vis .titBox .description em{color:#ff6600;}
+
+/*BRAND MERIT*/
+.phonak .brand{padding:93px 0 84px;background-color:#ecf1e8;}
+.phonak .brand .sTit{font-weight:700;font-size:32px;line-height:32px;text-align:center;}
+.phonak .brand .tit2{margin-top:21px;line-height:43px;}
+.phonak .brand .tit2 .logo{display:inline-block;width:212px;margin-left:15px;}
+.phonak .brand .listBox{margin-top:49px;}
+.phonak .brand .listBox ul{max-width:1181px;margin:auto;overflow:hidden;}
+.phonak .brand .listBox li{float:left;width:32%;}
+.phonak .brand .listBox li+li{margin-left:2%;}
+.phonak .brand .listBox .imgBox{}
+.phonak .brand .listBox .img{display:block;height:279px;}
+.phonak .brand .listBox .mer1 .img{background:url('../img/img_main_merit_a_376x279.jpg') no-repeat;}
+.phonak .brand .listBox .mer2 .img{background:url('../img/img_main_merit_b_376x279.jpg') no-repeat;}
+.phonak .brand .listBox .mer3 .img{background:url('../img/img_main_merit_c_376x279.jpg') no-repeat;}
+.phonak .brand .listBox .txtBox{height:155px;padding:28px 38px;background-color:#fff;}
+.phonak .brand .listBox .txtBox .txt{font-size:28px;line-height:34px;letter-spacing:-.5px;text-align:center;}
+
+/*AWARD*/
+.phonak .award{height:782px;padding:93px 0 53px;background:url('../img/img_award_bg_285x285.jpg') center center no-repeat;background-size:cover;}
+.phonak .award .listBox{margin-top:50px;}
+.phonak .award .listBox ul{max-width:1181px;margin:auto;padding:0 106px;overflow:hidden;}
+.phonak .award .listBox li{float:left;width:32%;}
+.phonak .award .listBox li+li{margin-left:2%;}
+.phonak .award .listBox .img{display:block;width:240px;margin:auto;}
+.phonak .award .listBox .txtBox{margin-top:26px;text-align:center;}
+.phonak .award .listBox .awardTit{font-weight:700;font-size:34px;line-height:38px;color:#fff;}
+.phonak .award .listBox .awardTit em{display:block;color:#80c242;}
+.phonak .award .listBox .sector{margin-top:10px;font-size:22px;line-height:31px;color:#fff;}
+.phonak .award .note{display:block;margin-top:47px;font-size:14px;line-height:14px;color:#a3a3a3;text-align:center;}
+
+/*SOLUTION*/
+.phonak .solution{background-color:#ecf1e8;}
+.phonak .solution .intro{padding:92px 0 94px;}
+.phonak .solution .sTit{font-weight:900;font-size:52px;line-height:52px;text-align:center;}
+.phonak .solution .tit2{margin-top:12px;}
+.phonak .solution .videoBox{max-width:965px;margin:38px auto 0;}
+.phonak .solution .videoBox .videoWrap{position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;}
+.videoWrap iframe,
+.videoWrap object,
+.videoWrap embed{position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.phonak .solution .listBox{height:1428px;padding:102px 16px 95px;background:url('../img/img_solution_bg_1936x1428.jpg') no-repeat;background-size:cover;}
+.phonak .solution .listBox .wrap{max-width:1181px;margin:auto;}
+.phonak .solution .listBox .list + .list{margin-top:51px;}
+.phonak .solution .listBox .list .inner{overflow:hidden;}
+.phonak .solution .listBox .list .imgBox{float:left;width:48%;}
+.phonak .solution .listBox .list .img{display:block;width:100%;height:269px;}
+.phonak .solution .listBox .list.sol1 .img{background:url('../img/img_solution_a_552x269.jpg') no-repeat;}
+.phonak .solution .listBox .list.sol2 .img{background:url('../img/img_solution_b_552x269.jpg') no-repeat;}
+.phonak .solution .listBox .list.sol3 .img{background:url('../img/img_solution_c_552x269.jpg') no-repeat;}
+.phonak .solution .listBox .list.sol4 .img{background:url('../img/img_solution_d_552x269.jpg') no-repeat;}
+.phonak .solution .listBox .list .txtBox{float:left;width:48%;}
+.phonak .solution .listBox .list .inner > div:first-child{margin-right:4%;}
+.phonak .solution .tit3{height:75px;padding:0 21px;background-color:#80c242;border-radius:0 30px 0 0;font-size:25px;line-height:75px;color:#fff;text-align:center;}
+.phonak .solution .list.ty1 .tit3{border-radius:30px 0 0 0;}
+.phonak .solution .list .txtBox{padding-top:27px;}
+.phonak .solution .list.ty1 .txtBox{text-align:right;}
+.phonak .solution .list .txtBox > div{margin-top:26px;text-align:left;}
+.phonak .solution .list li{position:relative;padding-left:19px;}
+.phonak .solution .list li + li{margin-top:10px;}
+.phonak .solution .list li::before{content:'';position:absolute;top:10px;left:0;width:8px;height:8px;background-color:#333;}
+.phonak .solution .list .txt{display:block;font-size:20px;line-height:30px;letter-spacing:-.8px;}
+
+/*SPECIAL ADVANTAGES*/
+.phonak .special{padding:92px 16px 97px;}
+.phonak .special .listBox{margin-top:59px;}
+.phonak .special .listBox .wrap{max-width:1181px;margin:auto;}
+.phonak .special .listBox ul{overflow:hidden;margin:0 -16px;}
+.phonak .special .listBox li{float:left;width:33.33%;padding:16px;}
+.phonak .special .listBox .img{display:block;}
+.phonak .special .listBox .txtBox{display:table;height:158px;padding:0 34px;background-color:#eff1ed;}
+.phonak .special .listBox .txtBox .txt{display:table-cell;vertical-align:middle;font-size:25px;line-height:34px;text-align:center;}
+
+/*COMMENT*/
+.phonak .comment{display:none;height:542px;padding:104px 16px 102px;background:url('../img/img_comment_bg_1951x542.jpg') no-repeat;}
+.phonak .comment .listBox{overflow:hidden;max-width:1250px;margin:auto;}
+.phonak .comment .list{float:left;width:32%;}
+.phonak .comment .list + .list{margin-left:2%;}
+.phonak .comment .frame{position:relative;display:table;width:100%;min-height:351px;background:url('../img/img_comment_bubble_380x333.png') no-repeat;background-size:100%;}
+.phonak .comment .txtBox{height:100%;padding:17% 25px 0 32px;}
+.phonak .comment .txt{font-size:22px;line-height:34px;color:#fff;}
+.phonak .comment .name{display:inline-block;margin-top:20px;color:#a9a9a9;}
+.phonak .comment .profile{position:absolute;right:33px;top:48%;}
+.phonak .comment .profile .img{display:block;width:75px;}
+.phonak .comment .profile img{width:100%;}
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after{opacity:0;}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after{opacity:0;}
+
+/*SERVICE*/
+.phonak .service{padding:93px 16px 102px;background-color:#faf3eb;}
+.phonak .service .event{max-width:1181px;margin:59px auto 0;overflow:hidden;}
+.phonak .service .list{float:left;width:48%;background-color:#fff;border-radius:0 30px 0 30px;}
+.phonak .service .list + .list{margin-left:4%;}
+.phonak .service .txtBox{display:table;width:100%;height:138px;padding:0 49px;background-color:#95cb66;border-radius:0 30px 0 0;}
+.phonak .service .txtBox .txt{display:table-cell;vertical-align:middle;font-weight:300;font-size:32px;line-height:44px;color:#fff;}
+.phonak .service .txtBox .txt strong{display:block;font-weight:700;font-size:36px;}
+.phonak .service .infoBox{display:table;position:relative;width:100%;height:478px;padding:43px 42px;background-color:#fff;border-radius:0 0 0 30px}
+.phonak .service .img{display:table-cell;vertical-align:middle;width:413px;height:414px;}
+.phonak .service .ico{position:absolute;left:37px;top:29px;display:block;width:131px;height:131px;}
+.phonak .service .infoBox li + li{margin-top:32px;}
+.phonak .service .infoBox .iTit{font-weight:700;font-size:26px;line-height:26px;}
+.phonak .service .infoBox .chart{overflow:hidden;padding:27px 32px 19px;margin-top:18px;background-color:#f4f6f3;border-radius:10px;}
+.phonak .service .infoBox .chart dl{float:left;width:48%;}
+.phonak .service .infoBox .chart dl + dl{width:39%;margin-left:13%;}
+.phonak .service .infoBox .chart dt{position:relative;padding-bottom:6px;margin-bottom:5px;font-weight:700;font-size:18px;line-height:18px;}
+.phonak .service .infoBox .chart dt::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background-color:#282828;}
+.phonak .service .infoBox .chart dd{font-weight:900;font-size:24px;line-height:24px;color:#ff6600;}
+.phonak .service .infoBox .chart .num{display:inline-block;font-size:36px;line-height:36px;}
+.phonak .service .infoBox .chart span{display:block;margin-top:4px;font-weight:400;font-size:16px;line-height:24px;color:rgba(40,40,40,.5);}
+
+/*SEARCH*/
+.phonak .search{padding:115px 16px 98px;}
+.phonak .search .infoBox{max-width:1181px;margin:54px auto 0;overflow:hidden;}
+.phonak .search .infoBox ul{overflow:hidden;}
+.phonak .search .infoBox li{float:left;width:48%;}
+.phonak .search .infoBox li + li{margin-left:4%;}
+.phonak .search .img{display:block;}
+.phonak .search .btn span{display:inline-block;padding-right:57px;background:url('../img/ico_search_35x39.png') no-repeat;background-position:right center;}
+
+/*SOCIAL MEDIA*/
+.phonak .social{margin-bottom:116px;padding:101px 0 78px;background-color:#ebf7e1;}
+.phonak .social .icoBox{margin-top:39px;}
+.phonak .social .icoBox ul{display:table;margin:auto;}
+.phonak .social .icoBox li{display:table-cell;text-align:center;padding:0 13px;}
+.phonak .social .icoBox li a{display:inline-block;}
+.phonak .social .icoBox .ico{display:inline-block;width:132px;}
+.phonak .social .icoBox .ico img{width:100%;}
+.phonak .social .infoBox{max-width:799px;margin:auto;}
+.phonak .social .line{margin-top:81px;text-align:center;}
+.phonak .social .line .txt{display:block;position:relative;padding:0 246px;font-size:24px;line-height:44px;}
+.phonak .social .line .txt::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:240px;height:2px;background-color:#282828;}
+.phonak .social .line .txt::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:240px;height:2px;background-color:#282828;}
+.phonak .social .info{margin-top:34px;overflow:hidden;}
+.phonak .social .info .list{float:left;width:30%;}
+.phonak .social .info .list + .list{width:65%;margin-left:5%;}
+.phonak .social .info li{position:relative;padding-left:9px;}
+.phonak .social .info .txt{font-size:17px;line-height:32px;color:rgba(40,40,40,0.7);}
+.phonak .social .info li::before{content:'';position:absolute;left:0;top:12px;width:3px;height:3px;background-color:rgba(40,40,40,0.7);}
+
+/*QUICK LINK*/
+.phonak .quickLink{position:fixed;bottom:0;left:0;width:100%;z-index:999;}
+.phonak .quickLink ul{overflow:hidden;}
+.phonak .quickLink li{float:left;width:50%;height:116px;text-align:center;}
+.phonak .quickLink .link{display:block;height:100%;background-color:#ff6600;}
+.phonak .quickLink ul > li:first-child .link{background-color:#95cb66;}
+.phonak .quickLink a{display:block;height:100%;color:#fff;font-weight:900;font-size:34px;line-height:116px;}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+/*
+##Device = Tablets, Ipads (portrait)
+*/
+	.phonak .tit1{font-size:130px;line-height:130px;}
+	.phonak .tit2{font-size:40px;line-height:45px;}
+	.phonak .tit2.ty1{color:#ff6600;}
+	.phonak .section .description{margin-top:27px;font-size:24px;line-height:32px;}
+	.phonak .btn{margin-top:36px;}
+	.phonak .btn a{display:inline-block;width:600px;height:98px;font-size:30px;line-height:98px;border-radius:57px;}
+
+	.phonak .vis .titBox .description{font-size:45px;line-height:45px;}
+
+	.phonak .brand .listBox .txtBox{display:table;height:130px;padding:0 16px;}
+	.phonak .brand .listBox .txtBox .txt{display:table-cell;vertical-align:middle;font-size:22px;line-height:30px;}
+
+	.phonak .award{height:700px;}
+	.phonak .award .listBox .awardTit{margin-top:20px;font-size:28px;line-height:32px;}
+	.phonak .award .listBox .sector{margin-top:8px;font-size:18px;line-height:26px;}
+	.phonak .award .listBox .img{width:170px;}
+
+	.phonak .solution .sTit{font-size:40px;line-height:40px;}
+	.phonak .solution .tit2{margin-top:5px;}
+	.phonak .solution .tit3{font-size:23px;}
+
+	.phonak .special .listBox ul{margin:0 -12px;}
+	.phonak .special .listBox li{padding:12px;}
+	.phonak .special .listBox .txtBox{padding:0 16px;}
+	.phonak .special .listBox .txtBox .txt{font-size:22px;line-height:30px;}
+
+	.phonak .comment{height:430px;padding:100px 16px;}
+	.phonak .comment .listBox{max-width:736px;}
+	.phonak .comment .frame{min-height:281px;}
+	.phonak .comment .txtBox{padding:17% 20px 0 26px;}
+	.phonak .comment .txt{font-size:16px;line-height:23px;}
+	.phonak .comment .profile{right:27px;}
+	.phonak .comment .profile .img{width:50px;}
+
+	.phonak .service .txtBox{height:110px;padding:0 28px;}
+	.phonak .service .txtBox .txt{font-size:22px;line-height:35px;}
+	.phonak .service .txtBox .txt strong{font-size:27px;}
+	.phonak .service .infoBox{padding:43px 20px;}
+	.phonak .service .img{width:100%;}
+	.phonak .service .ico{left:20px;top:20px;width:100px;}
+	.phonak .service .infoBox .chart{padding:27px 20px;}
+	.phonak .service .infoBox .chart dd{font-size:20px;}
+	.phonak .service .infoBox .chart .num{font-size:29px;}
+
+	.phonak .social{margin-bottom:80px;}
+	.phonak .social .icoBox .ico{width:110px;height:110px;}
+	.phonak .social .infoBox{max-width:689px;}
+	.phonak .social .line .txt{padding:0 210px;font-size:20px;line-height:20px;}
+	.phonak .social .line .txt::before{width:210px;}
+	.phonak .social .line .txt::after{width:210px;}
+	.phonak .social .info .txt{font-size:15px;line-height:30px;}
+
+	.phonak .quickLink li{height:80px;}
+	.phonak .quickLink a{font-weight:900;font-size:25px;line-height:80px;}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	/*
+	##Device = Tablets, Ipads (landscape)
+	*/
+	.phonak .tit1{font-size:130px;line-height:130px;}
+	.phonak .tit2{font-size:40px;line-height:45px;}
+	.phonak .tit2.ty1{color:#ff6600;}
+	.phonak .section .description{margin-top:27px;font-size:24px;line-height:32px;}
+	.phonak .btn{margin-top:36px;}
+	.phonak .btn a{display:inline-block;width:600px;height:98px;font-size:30px;line-height:98px;border-radius:57px;}
+
+	.phonak .support .inner{height:100%;overflow-y:auto;}
+
+	.phonak .vis .titBox .description{font-size:45px;line-height:45px;}
+
+	.phonak .brand .listBox .txtBox{display:table;height:130px;padding:0 16px;}
+	.phonak .brand .listBox .txtBox .txt{display:table-cell;vertical-align:middle;font-size:22px;line-height:30px;}
+
+	.phonak .award{height:700px;}
+	.phonak .award .listBox .awardTit{margin-top:20px;font-size:28px;line-height:32px;}
+	.phonak .award .listBox .sector{margin-top:8px;font-size:18px;line-height:26px;}
+	.phonak .award .listBox .img{width:170px;}
+
+	/*SOLUTION*/
+	.phonak .solution{background-color:#fff;padding-top:36px;}
+	.phonak .solution .pcOnly{display:none !important;}
+	.phonak .solution .moOnly{display:block !important;}
+	.phonak .solution .intro{padding:0 0 36px;}
+	.phonak .solution .sTit{font-size:40px;line-height:40px;}
+	.phonak .solution .tit2{margin-top:5px;}
+	.phonak .solution .tit3{font-size:23px;}
+	.phonak .solution .videoBox{margin-top:24px;}
+	.phonak .solution .videoBox .embeded{width:375px;height:211px;}
+	.phonak .solution .listBox{height:auto;padding:31px 16px;background:none;background-color:#ecf1e8;}
+	.phonak .solution .listBox .wrap{width:100%;overflow:hidden;}
+	.phonak .solution .listBox .list{float:left;width:48%;margin-top:11px;margin-left:4%}
+	.phonak .solution .listBox .list + .list{margin-top:11px;}
+	.phonak .solution .listBox .wrap > .list:nth-child(2n+1){margin-left:0;}
+	.phonak .solution .listBox .wrap > .list:nth-child(-n+2){margin-top:0;}
+	.phonak .solution .listBox .list .imgBox{float:none;width:100%;}
+	.phonak .solution .listBox .list .img{height:138px;}
+	.phonak .solution .listBox .list.sol1 .img{background:url('../img/img_solution_a_552x269.jpg') no-repeat;background-position:center center;background-size:cover;}
+	.phonak .solution .listBox .list.sol2 .img{background:url('../img/img_solution_b_552x269.jpg') no-repeat;background-position:center center;background-size:cover;}
+	.phonak .solution .listBox .list.sol3 .img{background:url('../img/img_solution_c_552x269.jpg') no-repeat;background-position:center center;background-size:cover;}
+	.phonak .solution .listBox .list.sol4 .img{background:url('../img/img_solution_d_552x269.jpg') no-repeat;background-position:center center;background-size:cover;}
+	.phonak .solution .listBox .list .txtBox{display:table;float:none;width:100%;height:60px;padding-top:0;}
+	.phonak .solution .listBox .list > div:first-child{margin-right:0;}
+	.phonak .solution .tit3{display:table-cell;vertical-align:middle;height:60px;padding:16px;border-radius:0;font-size:15px;line-height:17px;}
+	.phonak .solution .list.ty1 .tit3{border-radius:0;}
+	.phonak .solution .listBox .list .inner.moOnly .txtBox{display:table !important;width:100%;height:66px;}
+	.phonak .solution .listBox .list .inner.moOnly .txtBox .tit3{padding:6px;}
+
+	.phonak .special .listBox ul{margin:0 -12px;}
+	.phonak .special .listBox li{padding:12px;}
+	.phonak .special .listBox .txtBox{padding:0 16px;}
+	.phonak .special .listBox .txtBox .txt{font-size:22px;line-height:30px;}
+
+	.phonak .comment{height:430px;padding:100px 16px;}
+	.phonak .comment .listBox{max-width:736px;}
+	.phonak .comment .frame{min-height:281px;}
+	.phonak .comment .txtBox{padding:15% 20px 0 17px;}
+	.phonak .comment .txt{font-size:16px;line-height:23px;}
+	.phonak .comment .profile{right:27px;}
+	.phonak .comment .profile .img{width:50px;}
+
+	.phonak .service .txtBox{height:110px;padding:0 28px;}
+	.phonak .service .txtBox .txt{font-size:22px;line-height:35px;}
+	.phonak .service .txtBox .txt strong{font-size:27px;}
+	.phonak .service .infoBox{padding:43px 20px;}
+	.phonak .service .img{width:100%;}
+	.phonak .service .ico{left:20px;top:20px;width:100px;}
+	.phonak .service .infoBox .chart{padding:27px 20px;}
+	.phonak .service .infoBox .chart dd{font-size:20px;}
+	.phonak .service .infoBox .chart .num{font-size:29px;}
+
+	.phonak .social{margin-bottom:80px;}
+	.phonak .social .icoBox .ico{width:110px;height:110px;}
+	.phonak .social .infoBox{max-width:689px;}
+	.phonak .social .line .txt{padding:0 210px;font-size:20px;line-height:20px;}
+	.phonak .social .line .txt::before{width:210px;}
+	.phonak .social .line .txt::after{width:210px;}
+	.phonak .social .info .txt{font-size:15px;line-height:30px;}
+
+	.phonak .quickLink li{height:80px;}
+	.phonak .quickLink a{font-size:25px;line-height:80px;}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+*/
+	.phonak .moOnly{display:block !important;}
+	.phonak .pcOnly{display:none !important;}
+
+	/*재난지원금 팝업*/
+	.phonak .support{}
+	.phonak .support .inner{width:90%;height:100%;overflow-y:auto;}
+	.phonak .support .bttm{display:flex;height:50px;padding:0 20px;}
+
+	.phonak{width:100%;}
+	.phonak .tit1{margin-top:6px;font-size:52px;line-height:52px;}
+	.phonak .tit2{font-size:24px;line-height:29px;}
+	.phonak .section .description{margin-top:16px;font-size:14px;line-height:19px;}
+	.phonak .btn{margin-top:19px;}
+	.phonak .btn a{display:inline-block;width:100%;height:58px;font-size:19px;line-height:58px;border-radius:29px;}
+
+	/*MAIN VISUAL*/
+	.phonak .vis{position:relative;width:100%;height:357px;text-align:center;padding:20px 34px;background-size:auto 100%;}
+	.phonak .vis .logo{display:inline-block;overflow:hidden;width:76px;height:27px;text-align:center;}
+	.phonak .vis .titBox{padding-top:21px;}
+	.phonak .vis .titBox .description{font-weight:900;font-size:18px;line-height:18px;}
+
+	/*BRAND MERIT*/
+	.phonak .brand{padding:40px 0;}
+	.phonak .brand .sTit{font-size:16px;line-height:16px;}
+	.phonak .brand .tit2{margin-top:7px;line-height:18px;}
+	.phonak .brand .tit2 .logo{width:104px;margin-left:5px;}
+	.phonak .brand .listBox{max-width:405px;margin:24px auto 0;}
+	.phonak .brand .listBox ul{width:100%;}
+	.phonak .brand .listBox .img{display:block;height:173px;}
+	.phonak .brand .listBox .mer1 .img{background:url('../img/img_main_merit_a_mo_363x521.png') center center no-repeat;background-size:cover;}
+	.phonak .brand .listBox .mer2 .img{background:url('../img/img_main_merit_b_mo_363x521.png') center center no-repeat;background-size:cover;}
+	.phonak .brand .listBox .mer3 .img{background:url('../img/img_main_merit_c_mo_363x521.png') center center no-repeat;background-size:cover;}
+	.phonak .brand .listBox .txtBox{display:table;height:97px;padding:0 5px;}
+	.phonak .brand .listBox .txtBox.moOnly{display:table !important;width:100%;}
+	.phonak .brand .listBox .txtBox .txt{display:table-cell;vertical-align:middle;font-size:14px;line-height:17px;}
+
+	/*AWARD*/
+	.phonak .award{height:324px;padding:30px 16px;background:url('../img/img_award_bg_mo_1190x972.jpg') no-repeat;background-size:cover;}
+	.phonak .award .listBox{margin-top:18px;}
+	.phonak .award .listBox ul{max-width:343px;padding:0 26px;}
+	.phonak .award .listBox li{float:left;width:30%;}
+	.phonak .award .listBox li+li{margin-left:3.33%;}
+	.phonak .award .listBox .imgBox{}
+	.phonak .award .listBox .img{width:100%;}
+	.phonak .award .listBox .txtBox{margin-top:6px;}
+	.phonak .award .listBox .awardTit{font-size:13px;line-height:15px;}
+	.phonak .award .listBox .sector{margin-top:6px;font-size:12px;line-height:14px;}
+	.phonak .award .note{margin-top:15px;font-size:11px;line-height:14px;}
+
+	/*SOLUTION*/
+	.phonak .solution{background-color:#fff;padding-top:36px;}
+	.phonak .solution > .pcOnly{display:none !important;}
+	.phonak .solution > .moOnly{display:block !important;}
+	.phonak .solution .intro{padding:0 0 36px;}
+	.phonak .solution .sTit{font-size:24px;line-height:29px;}
+	.phonak .solution .tit2{margin-top:0;}
+	.phonak .solution .videoBox{margin-top:24px;}
+	.phonak .solution .videoBox .embeded{width:375px;height:211px;}
+	.phonak .solution .listBox{height:auto;padding:31px 16px;background:none;background-color:#ecf1e8;}
+	.phonak .solution .listBox .wrap{width:100%;overflow:hidden;}
+	.phonak .solution .listBox .list{float:left;width:48%;margin-top:11px;margin-left:4%}
+	.phonak .solution .listBox .list + .list{margin-top:11px;}
+	.phonak .solution .listBox .wrap > .list:nth-child(2n+1){margin-left:0;}
+	.phonak .solution .listBox .wrap > .list:nth-child(-n+2){margin-top:0;}
+	.phonak .solution .listBox .list .imgBox{float:none;width:100%;}
+	.phonak .solution .listBox .list .img{height:138px;}
+	.phonak .solution .listBox .list.sol1 .img{background:url('../img/img_solution_a_552x269.jpg') no-repeat;background-position:center center;background-size:auto 100%;}
+	.phonak .solution .listBox .list.sol2 .img{background:url('../img/img_solution_b_552x269.jpg') no-repeat;background-position:center center;background-size:auto 100%;}
+	.phonak .solution .listBox .list.sol3 .img{background:url('../img/img_solution_c_552x269.jpg') no-repeat;background-position:-10px center;background-size:auto 100%;}
+	.phonak .solution .listBox .list.sol4 .img{background:url('../img/img_solution_d_552x269.jpg') no-repeat;background-position:center center;background-size:auto 100%;}
+	.phonak .solution .listBox .list .txtBox{display:table;float:none;width:100%;height:60px;padding-top:0;}
+	.phonak .solution .listBox .list > div:first-child{margin-right:0;}
+	.phonak .solution .tit3{display:table-cell;vertical-align:middle;height:60px;padding:16px;border-radius:0;font-size:15px;line-height:17px;}
+	.phonak .solution .list.ty1 .tit3{border-radius:0;}
+	.phonak .solution .listBox .list .inner.moOnly .txtBox{display:table !important;width:100%;height:66px;}
+	.phonak .solution .listBox .list .inner.moOnly .txtBox .tit3{padding:6px;}
+
+	/*SPECIAL ADVANTAGES*/
+	.phonak .special{padding:34px 16px;}
+	.phonak .special .listBox{margin-top:22px;}
+	.phonak .special .listBox .wrap{}
+	.phonak .special .listBox ul{margin:0 -8px;}
+	.phonak .special .listBox li{float:left;width:50%;padding:8px;}
+	.phonak .special .listBox .txtBox{display:table;width:100%;height:94px;padding:9px;}
+	.phonak .special .listBox .txtBox .txt{font-size:15px;line-height:19px;}
+	.phonak .special .listBox .txtBox.moOnly{display:table !important;width:100%;}
+
+	/*COMMENT*/
+	.phonak .comment{height:266px;padding:32px 16px;background:url('../img/img_comment_bg_mo_1162x797.jpg') no-repeat;}
+	.phonak .comment .listBox{overflow:visible;max-width:100%;margin:0;}
+	.phonak .comment .list{float:none;text-align:center;}
+	.phonak .comment .list + .list{margin-left:0;}
+	.phonak .comment .frame{position:relative;display:inline-block;width:222px;height:200px;min-height:200px;background:url('../img/img_comment_bubble_380x333.png') no-repeat;background-size:100% 100%;}
+	.phonak .comment .txtBox{padding:30px 25px;text-align:left;}
+	.phonak .comment .txt{font-size:15px;line-height:23px;}
+	.phonak .comment .name{margin-top:10px;}
+	.phonak .comment .profile{position:absolute;right:23px;top:55%;}
+	.phonak .comment .profile .img{width:60px;}
+	.swiper-button-next{background:url('../img/ico_arrow_next_56x94.png') center center no-repeat;background-size:100%;}
+	.swiper-button-prev{background:url('../img/ico_arrow_prev_56x94.png') center center no-repeat;background-size:100%;}
+
+	/*SERVICE*/
+	.phonak .service{padding:38px 16px;}
+	.phonak .service .event{position:relative;width:100%;margin:27px 0 0;overflow:visible;}
+	.phonak .service .list{float:none;width:100%;border-radius:0 30px 0 0;overflow:hidden;}
+	.phonak .service .list.ty1{border-radius:30px 0 0 0;}
+	.phonak .service .list + .list{margin-left:0;margin-top:16px;}
+	.phonak .service .txtBox{float:left;width:64%;height:113px;padding:0 10px;background-color:#95cb66;border-radius:0 30px 0 0;text-align:center;}
+	.phonak .service .event .txtBox.moOnly{display:table !important;}
+	.phonak .service .txtBox.pcOnly{display:none;}
+	.phonak .service .list.ty1 .txtBox{width:36%;border-radius:30px 0 0 0;}
+	.phonak .service .txtBox .txt{font-size:15px;line-height:31px;}
+	.phonak .service .txtBox .txt strong{font-size:22px;line-height:25px;}
+	.phonak .service .infoBox{display:block;float:left;width:36%;height:113px;padding:6px;border-radius:0 0 0 30px;text-align:center;}
+	.phonak .service .list.ty1 .infoBox{width:64%;}
+	.phonak .service .img{display:inline-block;width:100%;max-width:100px;height:auto;}
+	.phonak .service .ico.pcOnly{display:none;}
+	.phonak .service .ico.moOnly{display:block;}
+	.phonak .service .ico{position:absolute;left:-6px;top:-20px;z-index:9;width:55px;height:55px;}
+	.phonak .service .infoBox ul{overflow:hidden;}
+	.phonak .service .infoBox li{float:left;width:49%;text-align:left;}
+	.phonak .service .infoBox li + li{margin-top:0;margin-left:2%;}
+	.phonak .service .infoBox .iTit{font-size:10px;line-height:10px;letter-spacing:-1px;}
+	.phonak .service .infoBox .chart{position:relative;padding:5px;margin-top:8px;}
+	.phonak .service .infoBox .chart dl{float:none;width:100%;}
+	.phonak .service .infoBox .chart dl + dl{width:100%;margin-left:0;margin-top:5px;}
+	.phonak .service .infoBox .chart dt{padding-bottom:2px;margin-bottom:3px;font-size:8px;line-height:12px;}
+	.phonak .service .infoBox .chart dt::before{height:1px}
+	.phonak .service .infoBox .chart dd{font-size:12px;line-height:15px;}
+	.phonak .service .infoBox .chart .num{font-size:13px;line-height:13px;}
+	.phonak .service .infoBox .chart span{position:absolute;top:7px;right:5px;margin-top:0;font-size:8px;line-height:8px;}
+
+	/*SEARCH*/
+	.phonak .search{padding:35px 13px;}
+	.phonak .search .infoBox{width:100%;margin:24px 0 0;}
+	.phonak .search .infoBox li{float:none;width:100%;}
+	.phonak .search .btn span{padding-right:25px;background:url('../img/ico_search_35x39.png') no-repeat;background-position:right center;background-size:16px 18px;}
+
+	/*SOCIAL MEDIA*/
+	.phonak .social{margin-bottom:50px;padding:41px 6px 38px;}
+	.phonak .social .icoBox{margin-top:24px;}
+	.phonak .social .icoBox li{padding:0 5px;}
+	.phonak .social .icoBox .ico{width:53px;height:53px;border-radius:27px;}
+	.phonak .social .infoBox{max-width:100%;margin:auto;}
+	.phonak .social .line{margin-top:25px;}
+	.phonak .social .line .txt{padding:0 136px;font-size:13px;line-height:13px;}
+	.phonak .social .line .txt::before{width:130px;height:1px;}
+	.phonak .social .line .txt::after{width:130px;height:1px;}
+	.phonak .social .info{margin-top:14px;}
+	.phonak .social .info .list{float:left;width:31%;}
+	.phonak .social .info .list + .list{width:66%;margin-left:3%;}
+	.phonak .social .info li{padding-left:6px;}
+	.phonak .social .info .txt{font-size:8px;line-height:15px;letter-spacing:-.7px;}
+	.phonak .social .info li::before{content:'';position:absolute;left:0;top:10px;width:2px;height:2px;}
+
+	/*QUICK LINK*/
+	.phonak .quickLink li{float:left;width:50%;height:50px;}
+	.phonak .quickLink a{font-weight:900;font-size:17px;line-height:50px;}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+	.phonak .moOnly{display:block !important;}
+	.phonak .pcOnly{display:none !important;}
+
+	/*재난지원금 팝업*/
+	.phonak .support .inner{width:90%;height:auto;overflow-y:auto;}
+	.phonak .support .bttm{display:flex;height:50px;padding:0 20px;background-color:#333;}
+	.phonak .support .bttm a{display:inline-block;line-height:50px;color:#fff;}
+	.phonak .support .bttm > a:first-child{margin-right:auto;}
+
+	.phonak{width:100%;}
+	.phonak .tit1{margin-top:6px;font-size:52px;line-height:52px;}
+	.phonak .tit2{font-size:24px;line-height:29px;}
+	.phonak .section .description{margin-top:16px;font-size:14px;line-height:19px;}
+	.phonak .btn{margin-top:19px;}
+	.phonak .btn a{display:inline-block;width:100%;height:58px;font-size:19px;line-height:58px;border-radius:29px;}
+
+	/*MAIN VISUAL*/
+	.phonak .vis{position:relative;width:100%;height:357px;text-align:center;padding:20px 34px;background-size:auto 100%;}
+	.phonak .vis .logo{display:inline-block;overflow:hidden;width:76px;height:27px;text-align:center;}
+	.phonak .vis .titBox{padding-top:21px;}
+	.phonak .vis .titBox .description{font-weight:900;font-size:18px;line-height:18px;}
+
+	/*BRAND MERIT*/
+	.phonak .brand{padding:40px 0;}
+	.phonak .brand .sTit{font-size:16px;line-height:16px;}
+	.phonak .brand .tit2{margin-top:7px;line-height:18px;}
+	.phonak .brand .tit2 .logo{width:104px;margin-top:10px;}
+	.phonak .brand .listBox{max-width:375px;margin:24px auto 0;}
+	.phonak .brand .listBox ul{width:100%;}
+	.phonak .brand .listBox .img{display:block;height:173px;}
+	.phonak .brand .listBox .mer1 .img{background:url('../img/img_main_merit_a_mo_363x521.png') center center no-repeat;background-size:auto 100%;}
+	.phonak .brand .listBox .mer2 .img{background:url('../img/img_main_merit_b_mo_363x521.png') center center no-repeat;background-size:auto 100%;}
+	.phonak .brand .listBox .mer3 .img{background:url('../img/img_main_merit_c_mo_363x521.png') center center no-repeat;background-size:auto 100%;}
+	.phonak .brand .listBox .txtBox{display:table;height:97px;padding:0 5px;}
+	.phonak .brand .listBox .txtBox.moOnly{display:table !important;width:100%;}
+	.phonak .brand .listBox .txtBox .txt{display:table-cell;vertical-align:middle;font-size:14px;line-height:17px;}
+
+	/*AWARD*/
+	.phonak .award{height:324px;padding:30px 16px;background:url('../img/img_award_bg_mo_1190x972.jpg') no-repeat;background-size:cover;}
+	.phonak .award .listBox{margin-top:18px;}
+	.phonak .award .listBox ul{max-width:343px;padding:0 26px;}
+	.phonak .award .listBox li{float:left;width:30%;}
+	.phonak .award .listBox li+li{margin-left:3.33%;}
+	.phonak .award .listBox .img{width:100%;}
+	.phonak .award .listBox .txtBox{margin-top:6px;}
+	.phonak .award .listBox .awardTit{font-size:13px;line-height:15px;}
+	.phonak .award .listBox .sector{margin-top:6px;font-size:12px;line-height:14px;}
+	.phonak .award .note{margin-top:15px;font-size:11px;line-height:14px;}
+
+	/*SOLUTION*/
+	.phonak .solution{background-color:#fff;padding-top:36px;}
+	.phonak .solution .intro{padding:0 0 36px;}
+	.phonak .solution .sTit{font-size:24px;line-height:29px;}
+	.phonak .solution .tit2{margin-top:0;}
+	.phonak .solution .videoBox{margin-top:24px;}
+	.phonak .solution .videoBox .embeded{width:375px;height:211px;}
+	.phonak .solution .listBox{height:auto;padding:31px 16px;background:none;background-color:#ecf1e8;}
+	.phonak .solution .listBox .wrap{width:100%;overflow:hidden;}
+	.phonak .solution .listBox .list{float:left;width:48%;margin-top:11px;margin-left:4%}
+	.phonak .solution .listBox .list + .list{margin-top:11px;}
+	.phonak .solution .listBox .wrap > .list:nth-child(2n+1){margin-left:0;}
+	.phonak .solution .listBox .wrap > .list:nth-child(-n+2){margin-top:0;}
+	.phonak .solution .listBox .list .imgBox{float:none;width:100%;}
+	.phonak .solution .listBox .list .img{height:138px;}
+	.phonak .solution .listBox .list.sol1 .img{background:url('../img/img_solution_a_552x269.jpg') no-repeat;background-position:center center;background-size:auto 100%;}
+	.phonak .solution .listBox .list.sol2 .img{background:url('../img/img_solution_b_552x269.jpg') no-repeat;background-position:center center;background-size:auto 100%;}
+	.phonak .solution .listBox .list.sol3 .img{background:url('../img/img_solution_c_552x269.jpg') no-repeat;background-position:-10px center;background-size:auto 100%;}
+	.phonak .solution .listBox .list.sol4 .img{background:url('../img/img_solution_d_552x269.jpg') no-repeat;background-position:center center;background-size:auto 100%;}
+	.phonak .solution .listBox .list .txtBox{display:table;float:none;width:100%;height:60px;padding-top:0;}
+	.phonak .solution .listBox .list > div:first-child{margin-right:0;}
+	.phonak .solution .tit3{display:table-cell;vertical-align:middle;height:60px;padding:16px;border-radius:0;font-size:15px;line-height:17px;}
+	.phonak .solution .list.ty1 .tit3{border-radius:0;}
+	.phonak .solution .listBox .list .inner.moOnly .txtBox{display:table !important;width:100%;height:66px;}
+	.phonak .solution .listBox .list .inner.moOnly .txtBox .tit3{padding:6px;}
+
+	/*SPECIAL ADVANTAGES*/
+	.phonak .special{padding:34px 16px;}
+	.phonak .special .listBox{margin-top:22px;}
+	.phonak .special .listBox .wrap{}
+	.phonak .special .listBox ul{margin:0 -8px;}
+	.phonak .special .listBox li{float:left;width:50%;padding:8px;}
+	.phonak .special .listBox .txtBox{display:table;width:100%;height:94px;padding:5px;}
+	.phonak .special .listBox .txtBox .txt{font-size:15px;line-height:19px;}
+	.phonak .special .listBox .txtBox.moOnly{display:table !important;width:100%;}
+
+	/*COMMENT*/
+	.phonak .comment{height:266px;padding:32px 16px;background:url('../img/img_comment_bg_mo_1162x797.jpg') no-repeat;}
+	.phonak .comment .listBox{overflow:visible;max-width:100%;margin:0;}
+	.phonak .comment .list{float:none;text-align:center;}
+	.phonak .comment .list + .list{margin-left:0;}
+	.phonak .comment .frame{position:relative;display:inline-block;width:222px;height:200px;min-height:200px;background:url('../img/img_comment_bubble_380x333.png') no-repeat;background-size:100% 100%;}
+	.phonak .comment .txtBox{padding:30px 25px;text-align:left;}
+	.phonak .comment .txt{font-size:15px;line-height:23px;}
+	.phonak .comment .name{margin-top:10px;}
+	.phonak .comment .profile{position:absolute;right:23px;top:55%;}
+	.phonak .comment .profile .img{width:60px;}
+
+	.swiper-button-next{background:url('../img/ico_arrow_next_56x94.png') center center no-repeat;background-size:100%;}
+	.swiper-button-prev{background:url('../img/ico_arrow_prev_56x94.png') center center no-repeat;background-size:100%;}
+
+	/*SERVICE*/
+	.phonak .service{padding:38px 16px;}
+	.phonak .service .event{position:relative;width:100%;margin:27px 0 0;overflow:visible;}
+	.phonak .service .list{float:none;width:100%;border-radius:0 30px 0 0;overflow:hidden;}
+	.phonak .service .list.ty1{border-radius:30px 0 0 0;}
+	.phonak .service .list + .list{margin-left:0;margin-top:16px;}
+	.phonak .service .txtBox{float:left;width:64%;height:113px;padding:0 10px;background-color:#95cb66;border-radius:0 30px 0 0;text-align:center;}
+	.phonak .service .event .txtBox.moOnly{display:table !important;}
+	.phonak .service .txtBox.pcOnly{display:none;}
+	.phonak .service .list.ty1 .txtBox{width:36%;border-radius:30px 0 0 0;}
+	.phonak .service .txtBox .txt{font-size:15px;line-height:31px;}
+	.phonak .service .txtBox .txt strong{font-size:22px;line-height:25px;}
+	.phonak .service .infoBox{display:block;float:left;width:36%;height:113px;padding:3px;border-radius:0 0 0 30px;text-align:center;}
+	.phonak .service .list.ty1 .infoBox{width:64%;}
+	.phonak .service .img{display:inline-block;width:100%;max-width:100px;height:auto;}
+	.phonak .service .ico{position:absolute;left:-6px;top:-20px;z-index:9;width:55px;height:55px;}
+	.phonak .service .infoBox ul{overflow:hidden;}
+	.phonak .service .infoBox li{float:left;width:49%;text-align:left;}
+	.phonak .service .infoBox li + li{margin-top:0;margin-left:2%;}
+	.phonak .service .infoBox .iTit{font-size:10px;line-height:10px;letter-spacing:-1px;}
+	.phonak .service .infoBox .chart{position:relative;padding:5px;margin-top:8px;}
+	.phonak .service .infoBox .chart dl{float:none;width:100%;}
+	.phonak .service .infoBox .chart dl + dl{width:100%;margin-left:0;margin-top:5px;}
+	.phonak .service .infoBox .chart dt{padding-bottom:2px;margin-bottom:3px;font-size:8px;line-height:12px;}
+	.phonak .service .infoBox .chart dt::before{height:1px}
+	.phonak .service .infoBox .chart dd{font-size:11px;line-height:15px;}
+	.phonak .service .infoBox .chart .num{font-size:13px;line-height:13px;}
+	.phonak .service .infoBox .chart span{position:absolute;top:7px;right:3px;margin-top:0;font-size:8px;line-height:8px;}
+
+	/*SEARCH*/
+	.phonak .search{padding:35px 13px;}
+	.phonak .search .infoBox{width:100%;margin:24px 0 0;}
+	.phonak .search .infoBox li{float:none;width:100%;}
+	.phonak .search .btn span{padding-right:25px;background:url('../img/ico_search_35x39.png') no-repeat;background-position:right center;background-size:16px 18px;}
+
+	/*SOCIAL MEDIA*/
+	.phonak .social{margin-bottom:50px;padding:41px 6px 38px;}
+	.phonak .social .icoBox{margin-top:24px;}
+	.phonak .social .icoBox li{padding:0 5px;}
+	.phonak .social .icoBox .ico{width:53px;height:53px;border-radius:27px;}
+	.phonak .social .infoBox{max-width:100%;margin:auto;}
+	.phonak .social .line{margin-top:25px;}
+	.phonak .social .line .txt{padding:0 100px;font-size:13px;line-height:13px;}
+	.phonak .social .line .txt::before{width:95px;height:1px;}
+	.phonak .social .line .txt::after{width:95px;height:1px;}
+	.phonak .social .info{margin-top:14px;}
+	.phonak .social .info .list{float:left;width:31%;}
+	.phonak .social .info .list + .list{width:66%;margin-left:3%;}
+	.phonak .social .info li{padding-left:6px;}
+	.phonak .social .info .txt{font-size:8px;line-height:15px;letter-spacing:-.7px;}
+	.phonak .social .info li::before{content:'';position:absolute;left:0;top:10px;width:2px;height:2px;}
+
+	/*QUICK LINK*/
+	.phonak .quickLink li{float:left;width:50%;height:50px;}
+	.phonak .quickLink a{font-weight:900;font-size:17px;line-height:50px;}
+}
